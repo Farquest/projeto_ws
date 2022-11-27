@@ -39,11 +39,6 @@ class _HomeState extends State<Home> {
             )
           : ListView.separated(
               itemCount: _userModel.length,
-              separatorBuilder: (BuildContext context, int index) =>
-                  const Divider(
-                thickness: 5,
-                color: Color.fromARGB(237, 8, 102, 29),
-              ),
               padding: const EdgeInsets.all(8),
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
