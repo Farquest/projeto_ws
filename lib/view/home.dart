@@ -51,6 +51,21 @@ class _HomeState extends State<Home> {
                         fontFamily: 'Arial',
                       ),
                     ),
+                    subtitle: Text(
+                      'Username: ${_userModel[index].username}\n' +
+                          'Email: ${_userModel[index].email}\n' +
+                          'Endereço:\nCEP:${_userModel[index].address.zipcode}'
+                              '\tRua:${_userModel[index].address.street}\t'
+                              'Num:${_userModel[index].address.suite}\n' +
+                          'Cidade: ${_userModel[index].address.city}\n'
+                              'Telefone: ${_userModel[index].phone}\n' +
+                          'Site: ${_userModel[index].website}\n' +
+                          'Empresa: ${_userModel[index].company.name}',
+                      style: TextStyle(
+                          fontFamily: 'Arial',
+                          fontSize: 11,
+                          overflow: TextOverflow.ellipsis),
+                    ),
                     tileColor: const Color.fromARGB(200, 8, 102, 29),
                     onTap: () {},
                   ),
