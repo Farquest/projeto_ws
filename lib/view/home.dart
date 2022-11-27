@@ -44,7 +44,13 @@ class _HomeState extends State<Home> {
                 return Card(
                   child: ListTile(
                     leading: const Icon(Icons.account_circle),
-                    title: Text('Nome: ${_userModel[index].name}'),
+                    title: Text(
+                      'Nome: ${_userModel[index].name}',
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'Arial',
+                      ),
+                    ),
                     tileColor: const Color.fromARGB(200, 8, 102, 29),
                     onTap: () {},
                   ),
