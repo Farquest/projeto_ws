@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
         backgroundColor: const Color.fromARGB(237, 8, 102, 29),
       ),
       backgroundColor: const Color.fromARGB(255, 22, 207, 62),
-      body: _userModel!.isEmpty
+      body: _userModel.isEmpty
           ? const Center(
               child: CircularProgressIndicator(),
             )
