@@ -46,6 +46,7 @@ class _HomeState extends State<Home> {
                     leading: const Icon(Icons.account_circle),
                     title: Text('Nome: ${_userModel[index].name}'),
                     tileColor: const Color.fromARGB(200, 8, 102, 29),
+                    onTap: () {},
                   ),
                 );
               },
