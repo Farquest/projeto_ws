@@ -32,12 +32,27 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('REST API - CPU 2022'),
+        backgroundColor: Color.fromARGB(237, 8, 102, 29),
       ),
+      backgroundColor: Color.fromARGB(255, 22, 207, 62),
       body: _userModel == null || _userModel!.isEmpty
           ? const Center(
               child: CircularProgressIndicator(),
             )
-          : Text('Dados carregados.'),
+          : ListView.separated(
+              itemCount: _userModel.length,
+              separatorBuilder: (BuildContext context, int index) =>
+                  const Divider(
+                thickness: 5,
+                color: Color.fromARGB(237, 8, 102, 29),
+              ),
+              padding: const EdgeInsets.all(8),
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  title: Text('Nome: ${_userModel[index].name}'),
+                );
+              },
+            ),
     );
   }
 }
