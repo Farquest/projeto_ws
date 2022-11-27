@@ -37,12 +37,16 @@ class _HomeState extends State<Home> {
           ? const Center(
               child: CircularProgressIndicator(),
             )
-          : ListView.separated(
+          : ListView.builder(
               itemCount: _userModel.length,
               padding: const EdgeInsets.all(8),
               itemBuilder: (BuildContext context, int index) {
-                return ListTile(
-                  title: Text('Nome: ${_userModel[index].name}'),
+                return Card(
+                  child: ListTile(
+                    leading: const Icon(Icons.account_circle),
+                    title: Text('Nome: ${_userModel[index].name}'),
+                    tileColor: const Color.fromARGB(200, 8, 102, 29),
+                  ),
                 );
               },
             ),
