@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:projeto_ws/model/user_model.dart';
 import 'package:projeto_ws/services/api_service.dart';
@@ -26,16 +27,13 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    _userModel.forEach((usm) {
-      print('Nome: ${usm.name}');
-    });
     return Scaffold(
       appBar: AppBar(
         title: const Text('REST API - CPU 2022'),
-        backgroundColor: Color.fromARGB(237, 8, 102, 29),
+        backgroundColor: const Color.fromARGB(237, 8, 102, 29),
       ),
-      backgroundColor: Color.fromARGB(255, 22, 207, 62),
-      body: _userModel == null || _userModel!.isEmpty
+      backgroundColor: const Color.fromARGB(255, 22, 207, 62),
+      body: _userModel!.isEmpty
           ? const Center(
               child: CircularProgressIndicator(),
             )
