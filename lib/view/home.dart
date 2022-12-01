@@ -47,23 +47,15 @@ class _HomeState extends State<Home> {
                     title: Text(
                       'Nome: ${_userModel[index].name}',
                       style: const TextStyle(
-                        fontSize: 16,
+                        fontSize: 14,
                         fontFamily: 'Arial',
                       ),
                     ),
                     subtitle: Text(
-                      'Username: ${_userModel[index].username}\n' +
-                          'Email: ${_userModel[index].email}\n' +
-                          'Endereço:\nCEP:${_userModel[index].address.zipcode}'
-                              '\tRua:${_userModel[index].address.street}\t'
-                              'Num:${_userModel[index].address.suite}\n' +
-                          'Cidade: ${_userModel[index].address.city}\n'
-                              'Telefone: ${_userModel[index].phone}\n' +
-                          'Site: ${_userModel[index].website}\n' +
-                          'Empresa: ${_userModel[index].company.name}',
-                      style: TextStyle(
+                      'Username: ${_userModel[index].username}\nEmail: ${_userModel[index].email}\nEndereço:\nCEP:${_userModel[index].address.zipcode}\tRua:${_userModel[index].address.street}\tNum:${_userModel[index].address.suite}\nCidade: ${_userModel[index].address.city}\nTelefone: ${_userModel[index].phone}\nSite: ${_userModel[index].website}\nEmpresa: ${_userModel[index].company.name}',
+                      style: const TextStyle(
                           fontFamily: 'Arial',
-                          fontSize: 11,
+                          fontSize: 15,
                           overflow: TextOverflow.ellipsis),
                     ),
                     tileColor: const Color.fromARGB(200, 8, 102, 29),
